@@ -67,12 +67,12 @@ if (isset($_POST["batal"])) {
                             <div class="form-group">
                                 <input type="namespace" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required
                                 value="<?= $dataMhs[0]["nama"] ?>">
-                                <small id="nameHelp" class="form-text">Nama lengkap mahasiswa.</small>
+                                <small id="nameHelp" class="form-text">Masukkan Nama lengkap. </small>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email"
                                 value="<?= $dataMhs[0]["email"] ?>">
-                                <small id="emailHelp" class="form-text">Masukan email Mahasiswa.</small>
+                                <small id="emailHelp" class="form-text">Masukan email.</small>
                             </div>
                             <div class="form-group">
                                 <select id="jurusan" class="form-control" name="jurusan" required value="<?= $dataMhs[0]["jurusan"] ?>">
@@ -95,7 +95,7 @@ if (isset($_POST["batal"])) {
                             </div>
                             <input type="text" class="form-control" id="kota_asal" name="kota_asal" placeholder="Kota Asal" required
                             value="<?= $dataMhs[0]["kota_asal"] ?>">
-                            <small id="kota_asalHelp" class="form-text">Masukan asal kota kelahiran.</small>
+                            <small id="kota_asalHelp" class="form-text">Masukan asal kota.</small>
                             <br />
                             </div>
                             <div align="right">
