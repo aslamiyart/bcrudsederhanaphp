@@ -27,7 +27,6 @@ function tambah($data){
     $email = htmlspecialchars($data["email"]);
     $jurusan = $data["jurusan"];
     $jenjang = $data["jenjang"];
-    $jenis_kelamin = $data["jenis_kelamin"];
     $kota_asal = htmlspecialchars($data["kota_asal"]);
 
     $nimCheck = query("SELECT nim FROM mahasiswa WHERE nim = '$nim'");
@@ -39,8 +38,7 @@ function tambah($data){
     }
 
     mysqli_query($connect,"INSERT INTO mahasiswa VALUES
-        ('', '$nim', '$nama', '$email', '$jurusan', '$jenjang', '$jenis_kelamin',
-        '$kota_asal')");
+        ('', '$nim', '$nama', '$email', '$jurusan', '$jenjang','$kota_asal')");
 
     return mysqli_affected_rows($connect);
 }
@@ -54,13 +52,11 @@ function update($data){
     $email = htmlspecialchars($data["email"]);
     $jurusan = $data["jurusan"];
     $jenjang = $data["jenjang"];
-    $jenis_kelamin = $data["jenis_kelamin"];
     $kota_asal = htmlspecialchars($data["kota_asal"]);
 
     mysqli_query($connect, "UPDATE mahasiswa SET nim ='$nim',
             nama = '$nama', email = '$email', jurusan = '$jurusan',
-            jenjang = '$jenjang', jenis_kelamin = '$jenis_kelamin',
-            kota_asal = '$kota_asal' WHERE idMahasiswa = $id");
+            jenjang = '$jenjang', kota_asal = '$kota_asal' WHERE idMahasiswa = $id");
     
     return mysqli_affected_rows($connect);
 }
